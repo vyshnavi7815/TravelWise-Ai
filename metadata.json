@@ -1,0 +1,6 @@
+{
+  "name": "TravelWise AI",
+  "description": "Intelligent AI travel planning & budget optimization assistant with multilingual support and smart itinerary generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

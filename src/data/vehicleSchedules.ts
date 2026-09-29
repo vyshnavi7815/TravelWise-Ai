@@ -1,0 +1,260 @@
+import { VehicleSchedule } from '../types/travel';
+
+export const VEHICLE_SCHEDULES: Record<string, VehicleSchedule[]> = {
+  bus: [
+    {
+      id: 'bus-kaveri-1',
+      operatorName: 'Kaveri Travels Volvo Multi-Axle AC Sleeper',
+      vehicleType: 'bus',
+      vehicleNumber: 'KA-01-AK-4521',
+      departureTime: '08:30 PM',
+      arrivalTime: '06:45 AM',
+      duration: '10h 15m',
+      boardingPoint: 'City Central Bus Terminus / Highway Junction',
+      droppingPoint: 'Main Central Bus Stand',
+      farePerPerson: 850,
+      availableSeats: 7,
+      rating: 4.8,
+      amenities: ['AC Sleeper Pod', 'Charging Port', 'Reading Light', 'Clean Blanket', 'Live GPS Tracking'],
+      liveStatus: 'Few Seats Left'
+    },
+    {
+      id: 'bus-superfast-2',
+      operatorName: 'Superfast Express Intercity AC Sleeper',
+      vehicleType: 'bus',
+      vehicleNumber: 'MH-04-SF-9920',
+      departureTime: '09:15 PM',
+      arrivalTime: '07:30 AM',
+      duration: '10h 15m',
+      boardingPoint: 'Main Junction Boarding Lounge',
+      droppingPoint: 'City Entrance Terminal',
+      farePerPerson: 750,
+      availableSeats: 14,
+      rating: 4.7,
+      amenities: ['Individual AC Vents', 'Bottled Water', 'Pillow', 'Emergency Exit'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'bus-vrl-3',
+      operatorName: 'VRL Travels I-Shift Multi-Axle Luxury',
+      vehicleType: 'bus',
+      vehicleNumber: 'KA-25-D-8822',
+      departureTime: '07:45 PM',
+      arrivalTime: '06:00 AM',
+      duration: '10h 15m',
+      boardingPoint: 'VRL Terminal / Express Way Counter',
+      droppingPoint: 'Downtown Tourist Circle',
+      farePerPerson: 920,
+      availableSeats: 5,
+      rating: 4.9,
+      amenities: ['Ultra Wide Sleeper', 'WiFi', 'Snack Pack', 'Charging', 'Air Suspension'],
+      liveStatus: 'Few Seats Left'
+    },
+    {
+      id: 'bus-ksrtc-4',
+      operatorName: 'Kadamba / KSRTC Airavat Club Class',
+      vehicleType: 'bus',
+      vehicleNumber: 'GA-03-TC-1102',
+      departureTime: '10:00 PM',
+      arrivalTime: '08:00 AM',
+      duration: '10h 00m',
+      boardingPoint: 'State Government Transport Terminal',
+      droppingPoint: 'Kadamba Main Stand',
+      farePerPerson: 700,
+      availableSeats: 22,
+      rating: 4.6,
+      amenities: ['Government Regulated', 'Sanitized', 'On-time Guarantee', 'Luggage Bay'],
+      liveStatus: 'Available'
+    }
+  ],
+  train: [
+    {
+      id: 'train-vande-1',
+      operatorName: 'Vande Bharat Superfast Express (22229)',
+      vehicleType: 'train',
+      vehicleNumber: 'Train #22229 (Vande Bharat)',
+      departureTime: '05:25 AM',
+      arrivalTime: '01:10 PM',
+      duration: '7h 45m',
+      boardingPoint: 'Central Railway Terminus (Platform 4)',
+      droppingPoint: 'Junction Station',
+      farePerPerson: 1050,
+      availableSeats: 28,
+      rating: 4.9,
+      amenities: ['Executive / Chair Car AC', 'On-board Hot Meals', 'Panoramic Windows', '160 km/h High Speed'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'train-konkan-2',
+      operatorName: 'Konkan Kanya Superfast Express (12111)',
+      vehicleType: 'train',
+      vehicleNumber: 'Train #12111 (Superfast)',
+      departureTime: '11:05 PM',
+      arrivalTime: '08:45 AM',
+      duration: '9h 40m',
+      boardingPoint: 'Main Central Station (Platform 2)',
+      droppingPoint: 'Madgaon / Main Junction',
+      farePerPerson: 650,
+      availableSeats: 42,
+      rating: 4.8,
+      amenities: ['3AC / Sleeper Berth', 'Bedroll provided', 'Pantry Car', 'Overnight Sleep'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'train-mandovi-3',
+      operatorName: 'Mandovi Superfast Express (10103)',
+      vehicleType: 'train',
+      vehicleNumber: 'Train #10103',
+      departureTime: '07:10 AM',
+      arrivalTime: '04:30 PM',
+      duration: '9h 20m',
+      boardingPoint: 'Terminal Station (Platform 1)',
+      droppingPoint: 'Town Station',
+      farePerPerson: 620,
+      availableSeats: 16,
+      rating: 4.7,
+      amenities: ['Scenic Western Ghats Route', 'Fresh Vada Pav & Chai in coach', '3AC'],
+      liveStatus: 'Filling Fast'
+    }
+  ],
+  flight: [
+    {
+      id: 'flight-indigo-1',
+      operatorName: 'IndiGo 6E-204 Direct Non-Stop',
+      vehicleType: 'flight',
+      vehicleNumber: '6E-204 (Airbus A321)',
+      departureTime: '09:40 AM',
+      arrivalTime: '11:00 AM',
+      duration: '1h 20m',
+      boardingPoint: 'Terminal 2 (Domestic Departure)',
+      droppingPoint: 'International Airport',
+      farePerPerson: 3600,
+      availableSeats: 9,
+      rating: 4.8,
+      amenities: ['15 kg Checked Baggage', '7 kg Hand Bag', 'Fast Track Security Option'],
+      liveStatus: 'Few Seats Left'
+    },
+    {
+      id: 'flight-airindia-2',
+      operatorName: 'Air India Express IX-118 Direct',
+      vehicleType: 'flight',
+      vehicleNumber: 'IX-118 (Boeing 737)',
+      departureTime: '03:15 PM',
+      arrivalTime: '04:35 PM',
+      duration: '1h 20m',
+      boardingPoint: 'Terminal 1',
+      droppingPoint: 'Dabolim / Mopa Airport',
+      farePerPerson: 3450,
+      availableSeats: 18,
+      rating: 4.6,
+      amenities: ['Complimentary Snack Box', '15 kg Luggage', 'Direct Flight'],
+      liveStatus: 'Available'
+    }
+  ],
+  cab: [
+    {
+      id: 'cab-sedan-1',
+      operatorName: 'Prepaid Outstation AC Sedan (Dzire / Etios)',
+      vehicleType: 'cab',
+      vehicleNumber: 'Dedicated Chauffeur Car',
+      departureTime: 'Flexible (Pickup at your door)',
+      arrivalTime: 'Direct 8-9 hours',
+      duration: '8h 30m',
+      boardingPoint: 'Your Home / Hotel Doorstep',
+      droppingPoint: 'Your Destination Resort / Hotel',
+      farePerPerson: 1800,
+      availableSeats: 4,
+      rating: 4.8,
+      amenities: ['Chauffeur Driven', 'Toll & State Tax Included', 'Unlimited Photo Breaks', 'AC'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'cab-suv-2',
+      operatorName: 'Innova Crysta Premium Outstation Cab',
+      vehicleType: 'cab',
+      vehicleNumber: 'VIP Chauffeur SUV',
+      departureTime: 'Flexible (Scheduled Pickup)',
+      arrivalTime: 'Direct 8 hours',
+      duration: '8h 00m',
+      boardingPoint: 'Pickup from doorstep',
+      droppingPoint: 'Direct Resort Gate',
+      farePerPerson: 2400,
+      availableSeats: 6,
+      rating: 4.9,
+      amenities: ['Captain Recliner Seats', 'Luggage Carrier', 'Complimentary Water & Mints', 'Top Chauffeur'],
+      liveStatus: 'Available'
+    }
+  ],
+  bike_scooter: [
+    {
+      id: 'bike-enfield-1',
+      operatorName: 'Royal Enfield Classic 350 Explorer Rental',
+      vehicleType: 'cab',
+      vehicleNumber: 'GA-02-BK-5511',
+      departureTime: '06:00 AM (Self Departure)',
+      arrivalTime: 'Self-Paced Ride',
+      duration: 'Scenic Highway Route',
+      boardingPoint: 'City Rental Hub / Delivery to Doorstep',
+      droppingPoint: 'Destination Rental Station',
+      farePerPerson: 650,
+      availableSeats: 2,
+      rating: 4.9,
+      amenities: ['2 ISI Helmets Provided', 'Mobile Phone Mount & Charger', 'Roadside Assistance', 'Full Tank Fuel Option'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'bike-scooter-2',
+      operatorName: 'Honda Activa 6G City Cruiser Scooter',
+      vehicleType: 'cab',
+      vehicleNumber: 'MH-03-SC-8804',
+      departureTime: 'Instant Pickup',
+      arrivalTime: 'Self-Paced',
+      duration: 'Flexible Touring',
+      boardingPoint: 'Station Pickup Counter',
+      droppingPoint: 'Resort Area Hub',
+      farePerPerson: 350,
+      availableSeats: 2,
+      rating: 4.7,
+      amenities: ['2 Helmets', 'Luggage Hook', 'High Mileage 55km/L', 'Verified Documents'],
+      liveStatus: 'Available'
+    }
+  ],
+  car_rental: [
+    {
+      id: 'car-selfdrive-1',
+      operatorName: 'Self-Drive SUV (Mahindra Thar 4x4 / Creta)',
+      vehicleType: 'cab',
+      vehicleNumber: 'KA-04-SD-7711',
+      departureTime: '08:00 AM Delivery',
+      arrivalTime: 'Full Trip Duration',
+      duration: 'Unlimited Kilometers',
+      boardingPoint: 'Airport / Station Delivery Counter',
+      droppingPoint: 'Flexible Return Point',
+      farePerPerson: 1600,
+      availableSeats: 5,
+      rating: 4.9,
+      amenities: ['Unlimited km', 'Fastag Installed', 'Comprehensive Insurance', 'Apple CarPlay & Android Auto'],
+      liveStatus: 'Available'
+    },
+    {
+      id: 'car-swift-2',
+      operatorName: 'Self-Drive Premium Hatchback (Maruti Swift)',
+      vehicleType: 'cab',
+      vehicleNumber: 'MH-12-SD-3390',
+      departureTime: 'Instant Handover',
+      arrivalTime: 'Full Trip',
+      duration: 'Flexible Self-Drive',
+      boardingPoint: 'City Center Hub',
+      droppingPoint: 'Return at Departure Hub',
+      farePerPerson: 950,
+      availableSeats: 4,
+      rating: 4.8,
+      amenities: ['Clean & Sanitized', 'Zero Security Deposit Scheme', 'AC & Music System', '24x7 Roadside Help'],
+      liveStatus: 'Available'
+    }
+  ]
+};
+
+// Aliases for user selection fallback
+VEHICLE_SCHEDULES['bike'] = VEHICLE_SCHEDULES['bike_scooter'];
+VEHICLE_SCHEDULES['rental_car'] = VEHICLE_SCHEDULES['car_rental'];
