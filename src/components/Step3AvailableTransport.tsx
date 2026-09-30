@@ -233,6 +233,46 @@ export const Step3AvailableTransport: React.FC<Step3AvailableTransportProps> = (
         })}
       </div>
 
+      {/* "FRO" RETURN JOURNEY SCHEDULE & TICKET SECTION - KEPT AT LAST AS REQUESTED */}
+      {details.tripType === 'round_trip' && (
+        <div className="p-5 rounded-2xl bg-gradient-to-r from-cyan-950/70 via-black to-cyan-950/40 border-2 border-emerald-500/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] space-y-3">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-xl bg-emerald-400 text-black flex items-center justify-center font-bold text-base shadow-[0_0_10px_#10b981]">
+                ↩️
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-400 text-black uppercase font-extrabold tracking-widest">
+                    "FRO" RETURN JOURNEY (KEPT AT LAST)
+                  </span>
+                  <span className="text-xs font-mono text-emerald-300">
+                    Return Date: {details.returnDate || '2026-10-19'}
+                  </span>
+                </div>
+                <h4 className="text-base font-bold text-white capitalize mt-0.5">
+                  {details.toDestination} ➔ {details.fromLocation}
+                </h4>
+                <div className="text-xs text-cyan-300/80">
+                  Return operator scheduled automatically · Both "TO" and "FRO" tickets issued together
+                </div>
+              </div>
+            </div>
+
+            <button
+              onClick={() => onBookTicketNow(currentVehicle)}
+              className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs transition-all shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center gap-1.5 cursor-pointer shrink-0"
+            >
+              <Ticket className="w-3.5 h-3.5 fill-black" />
+              <span>Book Both To & Fro Tickets 🎫</span>
+            </button>
+          </div>
+          <p className="text-xs text-cyan-200/80 pt-1 border-t border-cyan-950">
+            ✓ Your round-trip booking reserves your outbound ("to") seat and your return ("fro") seat with individual PNR confirmation and boarding passes.
+          </p>
+        </div>
+      )}
+
       {/* Navigation Footer */}
       <div className="flex items-center justify-between pt-4 border-t border-cyan-950/60">
         <button
